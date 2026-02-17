@@ -12,8 +12,7 @@
     <link rel="icon" type="image.png" href="./src/images/circle_logo.png" />
     <title>Anthony Black</title>
     <link rel="stylesheet" href="./src/input.css" />
-    <script type="module" src="./src/script.js" defer ></script>
-   
+    <script type="module" src="./javascript/script.js" ></script>
   </head>
   <body
     id="pageBody"
@@ -26,20 +25,17 @@
       >
         <!-- Home link image -->
         <a href="index.html" class="md:absolute md:top-4 md:left-4"
-          ><img
-            
-            src="./src/images/circle_logo.png"
-            alt="Logo"
-            width="60px"
-          />
+          ><img src="./src/images/circle_logo.png" alt="Logo" width="60px" />
         </a>
         <!-- Drop-down menu for sections -->
-        <div class="flex md:hidden content-center items-center gap-4 md:gap-12 lg:gap-16">
+        <div
+          class="flex md:hidden content-center items-center gap-4 md:gap-12 lg:gap-16"
+        >
           <nav class="inline-block relative">
             <!-- Menu Button  -->
             <button
-            id="sectionDropDownButton"  
-            class="group/button inline-flex w-full justify-center gap-x-1.5 rounded-md bg-acc2 px-2 py-1 text-sm font-semibold text-acc4 shadow-xs inset-ring-1 inset-ring-acc4 hover:inset-ring-acc3 hover:text-acc3 transition-colors duration-150 ease-in-out dark:bg-white/10 dark:text-white dark:shadow-none dark:inset-ring-white/5 dark:hover:bg-white/20"
+              id="sectionDropDownButton"
+              class="group/button inline-flex w-full justify-center gap-x-1.5 rounded-md bg-acc2 px-2 py-1 text-sm font-semibold text-acc4 shadow-xs inset-ring-1 inset-ring-acc4 hover:inset-ring-acc3 hover:text-acc3 transition-colors duration-150 ease-in-out dark:bg-white/10 dark:text-white dark:shadow-none dark:inset-ring-white/5 dark:hover:bg-white/20"
             >
               Sections
               <svg
@@ -57,31 +53,35 @@
               </svg>
             </button>
             <!-- Menu Drop-down -->
-            <div id="sectionDropDownMenu" class="absolute hidden z-100 top-10 right-0 py-1 w-32 origin-top-right text-left rounded-md bg-acc4 shadow-lg outline-1 outline-black/5">
-                <a
-                  href="#about"
-                  id="aboutLink"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:text-acc3 focus:text-acc3 focus:outline-hidden dark:text-gray-300 dark:focus:bg-white/5 dark:focus:text-white"
-                  >About me</a
-                >
-                <a
-                  href="#skills"
-                  id="skillsLink"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:text-acc3 focus:text-acc3 focus:outline-hidden dark:text-gray-300 dark:focus:bg-white/5 dark:focus:text-white"
-                  >Skills</a
-                >
-                <a
-                  href="#projects"
-                  id="projectsLink"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:text-acc3 focus:text-acc3 focus:outline-hidden dark:text-gray-300 dark:focus:bg-white/5 dark:focus:text-white"
-                  >Projects</a
-                >
-              </div>
-            
+            <div
+              id="sectionDropDownMenu"
+              class="absolute hidden z-100 top-10 right-0 py-1 w-32 origin-top-right text-left rounded-md bg-acc4 shadow-lg outline-1 outline-black/5"
+            >
+              <a
+                href="#about"
+                id="aboutLink"
+                class="block px-4 py-2 text-sm text-gray-700 hover:text-acc3 focus:text-acc3 focus:outline-hidden dark:text-gray-300 dark:focus:bg-white/5 dark:focus:text-white"
+                >About me</a
+              >
+              <a
+                href="#skills"
+                id="skillsLink"
+                class="block px-4 py-2 text-sm text-gray-700 hover:text-acc3 focus:text-acc3 focus:outline-hidden dark:text-gray-300 dark:focus:bg-white/5 dark:focus:text-white"
+                >Skills</a
+              >
+              <a
+                href="#projects"
+                id="projectsLink"
+                class="block px-4 py-2 text-sm text-gray-700 hover:text-acc3 focus:text-acc3 focus:outline-hidden dark:text-gray-300 dark:focus:bg-white/5 dark:focus:text-white"
+                >Projects</a
+              >
+            </div>
           </nav>
         </div>
-         <!-- Section links -->
-        <div class="hidden md:flex content-center items-center gap-4 md:gap-12 lg:gap-16">
+        <!-- Section links -->
+        <div
+          class="hidden md:flex content-center items-center gap-4 md:gap-12 lg:gap-16"
+        >
           <a
             href="#about"
             class="hover:text-acc3 hover:scale-150 transition-all duration-300 ease-in-out"
@@ -99,7 +99,9 @@
           >
         </div>
         <!-- Pages and Contact sections -->
-        <div class="md:absolute md:top-7 md:right-3 flex gap-6 justify-center items-center">
+        <div
+          class="md:absolute md:top-7 md:right-3 flex gap-6 justify-center items-center"
+        >
           <!-- Pages Drop-down Menu -->
           <nav class="inline-block relative">
             <!-- Menu Button  -->
@@ -123,21 +125,23 @@
               </svg>
             </button>
             <!-- Menu Drop-down -->
-            
-              <div id="pagesDropDownMenu" class="absolute hidden z-100 top-10 right-0 py-1 w-32 md:w-44 lg:w-52 origin-top-right text-left rounded-md bg-acc4 shadow-lg outline-1 outline-black/5">
-                <a
-                  href="./pages/my_projects.html"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:text-acc3 focus:text-acc3 focus:outline-hidden dark:text-gray-300 dark:focus:bg-white/5 dark:focus:text-white"
-                  >My Projects</a
-                >
-                <a
-                  href="./pages/social_links.html"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:text-acc3 focus:text-acc3 focus:outline-hidden dark:text-gray-300 dark:focus:bg-white/5 dark:focus:text-white"
-                  >Social Links</a
-                >
-              </div>
-            
-            </nav>
+
+            <div
+              id="pagesDropDownMenu"
+              class="absolute hidden z-100 top-10 right-0 py-1 w-32 md:w-44 lg:w-52 origin-top-right text-left rounded-md bg-acc4 shadow-lg outline-1 outline-black/5"
+            >
+              <a
+                href="./pages/my_projects.html"
+                class="block px-4 py-2 text-sm text-gray-700 hover:text-acc3 focus:text-acc3 focus:outline-hidden dark:text-gray-300 dark:focus:bg-white/5 dark:focus:text-white"
+                >My Projects</a
+              >
+              <a
+                href="./pages/social_links.html"
+                class="block px-4 py-2 text-sm text-gray-700 hover:text-acc3 focus:text-acc3 focus:outline-hidden dark:text-gray-300 dark:focus:bg-white/5 dark:focus:text-white"
+                >Social Links</a
+              >
+            </div>
+          </nav>
           <!-- Contact link -->
           <a
             href="#contact"
@@ -170,7 +174,7 @@
       <!-- Projects button  -->
       <a
         href="./pages/my_projects.html"
-        class=" absolute bottom-32 md:bottom-6 mx-auto px-4 py-2 border-2 border-acc3 shadow-xl rounded-lg bg-acc3 font-bold text-acc4 text-center text-xs md:text-base lg:text-lg hover:bg-acc4 hover:text-acc3 active:shadow-md active:shadow-acc3 active:scale-102 transition-colors duration-300 ease-in-out"
+        class="absolute bottom-32 md:bottom-6 mx-auto px-4 py-2 border-2 border-acc3 shadow-xl rounded-lg bg-acc3 font-bold text-acc4 text-center text-xs md:text-base lg:text-lg hover:bg-acc4 hover:text-acc3 active:shadow-md active:shadow-acc3 active:scale-102 transition-colors duration-300 ease-in-out"
         >See My Projects
       </a>
     </section>

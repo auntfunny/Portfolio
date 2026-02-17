@@ -5,7 +5,7 @@ const pagesDropDownMenu = document.querySelector("#pagesDropDownMenu");
 const aboutLink = document.querySelector("#aboutLink");
 const skillsLink = document.querySelector("#skillsLink");
 const projectsLink = document.querySelector("#projectsLink");
-const pageBody = document.querySelector("#pageBody");
+
 
 let pageMenuToggle = 0;
 let sectionMenuToggle = 0;
@@ -15,7 +15,7 @@ sectionDropDownButton.addEventListener("click", toggleSectionMenu);
 aboutLink.addEventListener("click", toggleSectionMenu);
 skillsLink.addEventListener("click", toggleSectionMenu);
 projectsLink.addEventListener("click", toggleSectionMenu);
-pageBody.addEventListener("click", checkMenus);
+document.body.addEventListener("click", checkMenus);
 
 
 

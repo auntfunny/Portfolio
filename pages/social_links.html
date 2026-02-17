@@ -12,7 +12,7 @@
     <link rel="icon" type="image.png" href="../src/images/circle_logo.png" />
     <title>Social Links</title>
     <link rel="stylesheet" href="../src/input.css" />
-    <script type="module" src="../src/script.js" defer></script>
+    <script type="module" src="../javascript/script_links.js" defer></script>
   </head>
   <body id="pageBody" class="font-sunflower">
     <header id="home" class="h-24">
@@ -26,10 +26,14 @@
         </a>
         <!-- Title -->
         <div>
-          <h1 class="text-xl text-acc3 md:text-4xl lg:text-6xl">Social Links</h1>
+          <h1 class="text-xl text-acc3 md:text-4xl lg:text-6xl">
+            Social Links
+          </h1>
         </div>
         <!-- Pages and Contact sections -->
-        <div class="md:absolute md:top-7 md:right-3 flex gap-6 justify-center items-center">
+        <div
+          class="md:absolute md:top-7 md:right-3 flex gap-6 justify-center items-center"
+        >
           <!-- Pages Drop-down Menu -->
           <nav class="inline-block relative">
             <!-- Menu Button  -->
@@ -53,21 +57,23 @@
               </svg>
             </button>
             <!-- Menu Drop-down -->
-            
-              <div id="pagesDropDownMenu" class="absolute hidden z-100 top-10 right-0 py-1 w-32 md:w-44 lg:w-52 origin-top-right text-left rounded-md bg-acc4 shadow-lg outline-1 outline-black/5">
-                <a
-                  href="../index.html"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:text-acc3 focus:text-acc3 focus:outline-hidden dark:text-gray-300 dark:focus:bg-white/5 dark:focus:text-white"
-                  >Home</a
-                >
-                <a
-                  href="./my_projects.html"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:text-acc3 focus:text-acc3 focus:outline-hidden dark:text-gray-300 dark:focus:bg-white/5 dark:focus:text-white"
-                  >My Projects</a
-                >
-              </div>
-            
-            </nav>
+
+            <div
+              id="pagesDropDownMenu"
+              class="absolute hidden z-100 top-10 right-0 py-1 w-32 md:w-44 lg:w-52 origin-top-right text-left rounded-md bg-acc4 shadow-lg outline-1 outline-black/5"
+            >
+              <a
+                href="../index.html"
+                class="block px-4 py-2 text-sm text-gray-700 hover:text-acc3 focus:text-acc3 focus:outline-hidden dark:text-gray-300 dark:focus:bg-white/5 dark:focus:text-white"
+                >Home</a
+              >
+              <a
+                href="./my_projects.html"
+                class="block px-4 py-2 text-sm text-gray-700 hover:text-acc3 focus:text-acc3 focus:outline-hidden dark:text-gray-300 dark:focus:bg-white/5 dark:focus:text-white"
+                >My Projects</a
+              >
+            </div>
+          </nav>
           <!-- Contact link -->
           <a
             href="#contact"
@@ -83,7 +89,7 @@
       <a
         href="https://www.frontendmentor.io/profile/auntfunny"
         target="_blank"
-        class="flex justify-center items-center w-lg p-4 rounded-2xl bg-acc1 shadow-2xl hover:shadow-[0px_4px_12px_#335145f4] hover:bg-acc2 hover:scale-105 transition-all duration-300 "
+        class="flex justify-center items-center w-lg p-4 rounded-2xl bg-acc1 shadow-2xl hover:shadow-[0px_4px_12px_#335145f4] hover:bg-acc2 hover:scale-105 transition-all duration-300"
       >
         <img
           src="../src/images/frontend_mentor_logo.jfif"
@@ -171,7 +177,7 @@
       <!-- Back to Top Button -->
       <a
         href="#home"
-        class="w-3/4 py-3 bg-transparent border border-acc4 text-acc4 lg:border-acc2 lg:text-acc2  lg:hover:text-acc4 lg:hover:border-acc4 transition-colors duration-150 text-center rounded-xl"
+        class="w-3/4 py-3 bg-transparent border border-acc4 text-acc4 lg:border-acc2 lg:text-acc2 lg:hover:text-acc4 lg:hover:border-acc4 transition-colors duration-150 text-center rounded-xl"
         >Back to Top</a
       >
     </footer>

@@ -1,46 +1,7 @@
-const pagesDropDownButton = document.querySelector("#pagesDropDownButton");
-const pagesDropDownMenu = document.querySelector("#pagesDropDownMenu");
-const mainBody = document.querySelector("#mainBody");
-const tipCalculatorCard = document.querySelector("#tipCalculatorCard");
-const socialLinksCard = document.querySelector("#socialLinksCard");
-const blogPreviewCard = document.querySelector("#blogPreviewCard");
-const menuPageCard = document.querySelector("#menuPageCard");
-const gateProjectCard = document.querySelector("#gateProjectCard");
-
-let pageMenuToggle = 0;
-
-pagesDropDownButton.addEventListener("click", togglePageMenu);
-document.body.addEventListener("click", checkMenus);
-
-function togglePageMenu(event) {
-  if (pageMenuToggle === 0) {
-    pagesDropDownMenu.classList.toggle("hidden");
-    event.stopPropagation();
-    pageMenuToggle = 1;
-  } else {
-    pagesDropDownMenu.classList.toggle("hidden");
-    pageMenuToggle = 0;
-  }
-}
-
-function checkMenus(event) {
-  if (!pagesDropDownMenu.contains(event.target) && pageMenuToggle === 1) {
-    togglePageMenu();
-  }
-}
-
-const newTipCalculator = document.createElement("article");
-newTipCalculator.id = "newTipCalculator";
-let myClassList1 =
-  "flex flex-col lg:flex-row justify-between gap-4 items-center w-3/4 min-h-84 p-3 md:p-6 bg-acc2 shadow-[0px_4px_12px_#335145f4] rounded-xl".split(
-    " ",
-  );
-let myClassList2 = "flex flex-col lg:flex-row-reverse justify-between gap-4 items-center w-3/4 min-h-84 p-3 md:p-6 bg-acc2 shadow-[0px_4px_12px_#335145f4] rounded-xl".split(" ");
-let classes1 = "flex flex-col lg:flex-row justify-between gap-4 items-center w-3/4 min-h-84 p-3 md:p-6 bg-acc2 shadow-[0px_4px_12px_#335145f4] rounded-xl";
-let classes2 = "flex flex-col lg:flex-row-reverse justify-between gap-4 items-center w-3/4 min-h-84 p-3 md:p-6 bg-acc2 shadow-[0px_4px_12px_#335145f4] rounded-xl";
-newTipCalculator.classList.add(myClassList1);
-newTipCalculator.className = classes1;
-newTipCalculator.innerHTML = `<!-- Picture and Link  -->
+ <!--  <article
+        id="tipCalculatorCard"
+        class="flex flex-col lg:flex-row justify-between gap-4 items-center w-3/4 min-h-84 p-3 md:p-6 bg-acc2 shadow-[0px_4px_12px_#335145f4] rounded-xl"
+      >
         <a
           href="https://tip-calculator-app-bay-phi.vercel.app/"
           target="_blank"
@@ -50,7 +11,6 @@ newTipCalculator.innerHTML = `<!-- Picture and Link  -->
             alt="Social Links Project"
             class="rounded-xl w-full"
         /></a>
-        <!-- Caption  -->
         <div class="w-full md:w-3/4 lg:w-1/2 flex flex-col justify-evenly h-80">
           <h2 class="text-lg md:text-3xl text-center lg:text-right text-acc3">
             Tip Calculator App
@@ -68,14 +28,13 @@ newTipCalculator.innerHTML = `<!-- Picture and Link  -->
             class="px-8 py-2 self-center border-2 border-acc3 shadow-xl rounded-lg bg-acc3 font-bold text-acc4 text-center text-xs md:text-base lg:text-lg hover:bg-acc4 hover:text-acc3 active:shadow-md active:shadow-acc3 active:scale-102 transition-colors duration-300 ease-in-out"
             >GitHub Repository</a
           >
-        </div>`;
+        </div>
+      </article>
 
-const newSocialLinks = document.createElement("article");
-newSocialLinks.id = "newSocialLinks";
-newSocialLinks.classList.add(myClassList2);
-newSocialLinks.className = classes2;
-newSocialLinks.innerHTML = `
-        <!-- Picture and Link  -->
+      <article
+      id="socialLinksCard"
+        class="flex flex-col lg:flex-row-reverse justify-between gap-4 items-center w-3/4 min-h-84 p-3 md:p-6 bg-acc2 shadow-[0px_4px_12px_#335145f4] rounded-xl"
+      >
         <a
           href="https://social-links-profile-theta-six.vercel.app/"
           target="_blank"
@@ -85,7 +44,6 @@ newSocialLinks.innerHTML = `
             alt="Social Links Project"
             class="rounded-xl w-full"
         /></a>
-        <!-- Caption  -->
         <div class="w-full md:w-3/4 lg:w-1/2 flex flex-col justify-evenly h-80">
           <h2 class="text-lg md:text-3xl text-center lg:text-left text-acc3">
             Generic Social Links Profile
@@ -103,15 +61,13 @@ newSocialLinks.innerHTML = `
             class="px-8 py-2 self-center border-2 border-acc3 shadow-xl rounded-lg bg-acc3 font-bold text-acc4 text-center text-xs md:text-base lg:text-lg hover:bg-acc4 hover:text-acc3 active:shadow-md active:shadow-acc3 active:scale-102 transition-colors duration-300 ease-in-out"
             >GitHub Repository</a
           >
-        </div>`;
+        </div>
+      </article>
 
-
-const newBlogPreview = document.createElement("article");
-newBlogPreview.id = "newBlogPreview";
-newBlogPreview.classList.add(myClassList1);
-newBlogPreview.className = classes1;
-newBlogPreview.innerHTML = `
-        <!-- Picture and Link  -->
+      <article
+      id="blogPreviewCard"
+        class="flex flex-col lg:flex-row justify-between gap-4 items-center w-3/4 min-h-84 p-3 md:p-6 bg-acc2 shadow-[0px_4px_12px_#335145f4] rounded-xl"
+      >
         <a
           href="https://auntfunny.github.io/Blog_Preview_Card/"
           target="_blank"
@@ -121,7 +77,6 @@ newBlogPreview.innerHTML = `
             alt="Blog Preview Project"
             class="rounded-xl w-full"
         /></a>
-        <!-- Caption  -->
         <div class="w-full md:w-3/4 lg:w-1/2 flex flex-col justify-evenly h-80">
           <h2 class="text-lg md:text-3xl text-center lg:text-right text-acc3">
             Generic Blog Preview Card
@@ -141,15 +96,13 @@ newBlogPreview.innerHTML = `
             class="px-8 py-2 self-center border-2 border-acc3 shadow-xl rounded-lg bg-acc3 font-bold text-acc4 text-center text-xs md:text-base lg:text-lg hover:bg-acc4 hover:text-acc3 active:shadow-md active:shadow-acc3 active:scale-102 transition-colors duration-300 ease-in-out"
             >GitHub Repository</a
           >
-        </div>`;
+        </div>
+      </article>
 
-
-const newMenuPage = document.createElement("article");
-newMenuPage.id = "newMenuPage";
-newMenuPage.classList.add(myClassList2);
-newMenuPage.className = classes2;
-newMenuPage.innerHTML = `
-        <!-- Picture and Link  -->
+      <article
+      id="menuPageCard"
+        class="flex flex-col lg:flex-row-reverse justify-between gap-4 items-center w-3/4 min-h-84 p-3 md:p-6 bg-acc2 shadow-[0px_4px_12px_#335145f4] rounded-xl"
+      >
         <a
           href="https://recipe-page-main-eosin-omega.vercel.app/"
           target="_blank"
@@ -159,7 +112,6 @@ newMenuPage.innerHTML = `
             alt="Recipe Page Project"
             class="rounded-xl w-full"
         /></a>
-        <!-- Caption  -->
         <div class="w-full md:w-3/4 lg:w-1/2 flex flex-col justify-evenly h-80">
           <h2 class="text-lg md:text-3xl text-center lg:text-left text-acc3">
             Generic Social Links Profile
@@ -177,23 +129,17 @@ newMenuPage.innerHTML = `
             class="px-8 py-2 self-center border-2 border-acc3 shadow-xl rounded-lg bg-acc3 font-bold text-acc4 text-center text-xs md:text-base lg:text-lg hover:bg-acc4 hover:text-acc3 active:shadow-md active:shadow-acc3 active:scale-102 transition-colors duration-300 ease-in-out"
             >GitHub Repository</a
           >
-        </div>`;
-
-
-
-const newGateProject = document.createElement("article");
-newGateProject.id = "newGateProject";
-newGateProject.classList.add(myClassList1);
-newGateProject.className = classes1;
-newGateProject.innerHTML = `
-        <!-- Picture and Link  -->
+        </div>
+      </article>
+      <article id="gateProjectCard"
+        class="flex flex-col lg:flex-row justify-between gap-4 items-center w-3/4 min-h-84 p-3 md:p-6 bg-acc2 shadow-[0px_4px_12px_#335145f4] rounded-xl"
+      >
         <a href="#" target="_blank" class="w-full md:w-120"
           ><img
             src="../src/images/Gate.png"
             alt="Gate Project"
             class="rounded-xl w-full hover:scale-105 transition-transform duration-300 ease-in-out"
         /></a>
-        <!-- Caption  -->
         <div class="w-full md:w-3/4 lg:w-1/2 flex flex-col justify-evenly h-80">
           <h2 class="text-lg md:text-3xl text-center lg:text-right text-acc3">
             Cabin Gate Project
@@ -213,12 +159,5 @@ newGateProject.innerHTML = `
             class="px-8 py-2 self-center border-2 border-acc3 shadow-xl rounded-lg bg-acc3 font-bold text-acc4 text-center text-xs md:text-base lg:text-lg hover:bg-acc4 hover:text-acc3 active:shadow-md active:shadow-acc3 active:scale-102 transition-colors duration-300 ease-in-out"
             >Cabin Facebook</a
           >
-        </div>`;
-
-
-
-mainBody.appendChild(newTipCalculator);
-mainBody.appendChild(newSocialLinks);
-mainBody.appendChild(newBlogPreview);
-mainBody.appendChild(newMenuPage);
-mainBody.appendChild(newGateProject);
+        </div>
+      </article> -->

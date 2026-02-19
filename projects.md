@@ -161,3 +161,46 @@
           >
         </div>
       </article> -->
+
+
+
+
+
+
+
+      <!--  <div
+                class="flex justify-center items-center w-28 h-28 lg:w-36 lg:h-36 rounded-xl bg-acc4 inset-shadow-sm/50 hover:scale-125 transition-all duration-400 ease-in-out"
+              >
+                <img
+                  src="./src/images/html.png"
+                  alt="HTML Icon"
+                  class="w-18 lg:w-28"
+                />
+              </div>
+              <div
+                class="flex justify-center items-center w-28 h-28 lg:w-36 lg:h-36 rounded-xl bg-acc4 inset-shadow-sm/50 hover:scale-125 transition-all duration-400 ease-in-out"
+              >
+                <img
+                  src="./src/images/css.png"
+                  alt="CSS Icon"
+                  class="w-18 lg:w-28"
+                />
+              </div>
+              <div
+                class="flex justify-center items-center w-28 h-28 lg:w-36 lg:h-36 rounded-xl bg-acc4 inset-shadow-sm/50 hover:scale-125 transition-all duration-400 ease-in-out"
+              >
+                <img
+                  src="./src/images/c.png"
+                  alt="C++ Icon"
+                  class="w-18 lg:w-28"
+                />
+              </div>
+              <div
+                class="flex justify-center items-center w-28 h-28 lg:w-36 lg:h-36 rounded-xl bg-acc4 inset-shadow-sm/50 hover:scale-125 transition-all duration-400 ease-in-out"
+              >
+                <img
+                  src="./src/images/tailwind.png"
+                  alt="Tailwind Logo"
+                  class="w-18 lg:w-28"
+                />
+              </div> -->

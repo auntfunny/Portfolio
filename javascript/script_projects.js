@@ -38,21 +38,33 @@ let myClassList1 =
 let myClassList2 = "flex flex-col lg:flex-row-reverse justify-between gap-4 items-center w-3/4 min-h-84 p-3 md:p-6 bg-acc2 shadow-[0px_4px_12px_#335145f4] rounded-xl".split(" ");
 let classes1 = "flex flex-col lg:flex-row justify-between gap-4 items-center w-3/4 min-h-84 p-3 md:p-6 bg-acc2 shadow-[0px_4px_12px_#335145f4] rounded-xl";
 let classes2 = "flex flex-col lg:flex-row-reverse justify-between gap-4 items-center w-3/4 min-h-84 p-3 md:p-6 bg-acc2 shadow-[0px_4px_12px_#335145f4] rounded-xl";
+let linkClasses = "w-full md:w-120 hover:scale-105 transition-transform duration-300 ease-in-out".split(" ");
+let linkClassName = "w-full md:w-120 hover:scale-105 transition-transform duration-300 ease-in-out";
+let captionClasses = "w-full md:w-3/4 lg:w-1/2 flex flex-col justify-evenly h-80".split(" ");
+let captionClassName = "w-full md:w-3/4 lg:w-1/2 flex flex-col justify-evenly h-80";
+
 newTipCalculator.classList.add(myClassList1);
 newTipCalculator.className = classes1;
-newTipCalculator.innerHTML = `<!-- Picture and Link  -->
-        <a
-          href="https://tip-calculator-app-bay-phi.vercel.app/"
-          target="_blank"
-          class="w-full md:w-120 hover:scale-105 transition-transform duration-300 ease-in-out"
-          ><img
-            src="../src/images/Tip_Calculator.png"
-            alt="Tip Calculator"
-            class="rounded-xl w-full"
-        /></a>
-        <!-- Caption  -->
-        <div class="w-full md:w-3/4 lg:w-1/2 flex flex-col justify-evenly h-80">
-          <h2 class="text-lg md:text-3xl text-center lg:text-right text-acc3">
+
+const tipPageLink = document.createElement("a");
+tipPageLink.id = "tipPageLink";
+tipPageLink.href = "https://tip-calculator-app-bay-phi.vercel.app/";
+tipPageLink.target = "_blank";
+tipPageLink.classList.add(linkClasses);
+tipPageLink.className = linkClassName;
+
+const tipImage = document.createElement("img");
+tipImage.id = "tipImage";
+tipImage.alt = "Tip Calculator";
+tipImage.classList.add("rounded-xl", "w-full");
+tipImage.className = "rounded-xl w-full";
+tipImage.src = "../src/images/Tip_Calculator.png";
+
+const tipCaption = document.createElement("div");
+tipCaption.id = "tipCaption";
+tipCaption.classList.add(captionClasses);
+tipCaption.className = captionClassName;
+tipCaption.innerHTML = `<h2 class="text-lg md:text-3xl text-center lg:text-right text-acc3">
             Tip Calculator App
           </h2>
           <p class="text-xs md:text-base text-acc4 px-2 md:indent-8">
@@ -67,8 +79,15 @@ newTipCalculator.innerHTML = `<!-- Picture and Link  -->
             target="_blank"
             class="px-8 py-2 self-center border-2 border-acc3 shadow-xl rounded-lg bg-acc3 font-bold text-acc4 text-center text-xs md:text-base lg:text-lg hover:bg-acc4 hover:text-acc3 active:shadow-md active:shadow-acc3 active:scale-102 transition-colors duration-300 ease-in-out"
             >GitHub Repository</a
-          >
-        </div>`;
+          >`;
+
+
+mainBody.appendChild(newTipCalculator);
+newTipCalculator.appendChild(tipPageLink);
+newTipCalculator.appendChild(tipCaption);
+tipPageLink.appendChild(tipImage);
+
+
 
 const newSocialLinks = document.createElement("article");
 newSocialLinks.id = "newSocialLinks";
@@ -217,8 +236,10 @@ newGateProject.innerHTML = `
 
 
 
-mainBody.appendChild(newTipCalculator);
+
 mainBody.appendChild(newSocialLinks);
 mainBody.appendChild(newBlogPreview);
 mainBody.appendChild(newMenuPage);
 mainBody.appendChild(newGateProject);
+
+

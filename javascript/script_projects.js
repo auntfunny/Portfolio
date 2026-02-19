@@ -58,7 +58,7 @@ tipImage.id = "tipImage";
 tipImage.alt = "Tip Calculator";
 tipImage.classList.add("rounded-xl", "w-full");
 tipImage.className = "rounded-xl w-full";
-tipImage.src = "../src/images/Tip_Calculator.png";
+tipImage.src = "../public/images/Tip_Calculator.png";
 
 const tipCaption = document.createElement("div");
 tipCaption.id = "tipCaption";
@@ -108,7 +108,7 @@ socialImage.id = "socialImage";
 socialImage.alt = "Tip Calculator";
 socialImage.classList.add("rounded-xl", "w-full");
 socialImage.className = "rounded-xl w-full";
-socialImage.src = "../src/images/Social_Links.png";
+socialImage.src = "../public/images/Social_Links.png";
 
 const socialCaption = document.createElement("div");
 socialCaption.id = "socialCaption";
@@ -156,7 +156,7 @@ blogImage.id = "blogImage";
 blogImage.alt = "Tip Calculator";
 blogImage.classList.add("rounded-xl", "w-full");
 blogImage.className = "rounded-xl w-full";
-blogImage.src = "../src/images/Blog_Preview.png";
+blogImage.src = "../public/images/Blog_Preview.png";
 
 const blogCaption = document.createElement("div");
 blogCaption.id = "blogCaption";
@@ -207,7 +207,7 @@ recipeImage.id = "recipeImage";
 recipeImage.alt = "Tip Calculator";
 recipeImage.classList.add("rounded-xl", "w-full");
 recipeImage.className = "rounded-xl w-full";
-recipeImage.src = "../src/images/Recipe_Page.png";
+recipeImage.src = "../public/images/Recipe_Page.png";
 
 const recipeCaption = document.createElement("div");
 recipeCaption.id = "recipeCaption";
@@ -257,7 +257,7 @@ gateImage.id = "gateImage";
 gateImage.alt = "Tip Calculator";
 gateImage.classList.add("rounded-xl", "w-full");
 gateImage.className = "rounded-xl w-full";
-gateImage.src = "../src/images/Gate.png";
+gateImage.src = "../public/images/Gate.png";
 
 const gateCaption = document.createElement("div");
 gateCaption.id = "gateCaption";

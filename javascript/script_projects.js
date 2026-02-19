@@ -93,20 +93,28 @@ const newSocialLinks = document.createElement("article");
 newSocialLinks.id = "newSocialLinks";
 newSocialLinks.classList.add(myClassList2);
 newSocialLinks.className = classes2;
-newSocialLinks.innerHTML = `
-        <!-- Picture and Link  -->
-        <a
-          href="https://social-links-profile-theta-six.vercel.app/"
-          target="_blank"
-          class="w-full md:w-120 hover:scale-105 transition-transform duration-300 ease-in-out"
-          ><img
-            src="../src/images/Social_Links.png"
-            alt="Social Links Project"
-            class="rounded-xl w-full"
-        /></a>
-        <!-- Caption  -->
-        <div class="w-full md:w-3/4 lg:w-1/2 flex flex-col justify-evenly h-80">
-          <h2 class="text-lg md:text-3xl text-center lg:text-left text-acc3">
+
+
+
+const socialPageLink = document.createElement("a");
+socialPageLink.id = "socialPageLink";
+socialPageLink.href = "https://social-links-profile-theta-six.vercel.app/";
+socialPageLink.target = "_blank";
+socialPageLink.classList.add(linkClasses);
+socialPageLink.className = linkClassName;
+
+const socialImage = document.createElement("img");
+socialImage.id = "socialImage";
+socialImage.alt = "Tip Calculator";
+socialImage.classList.add("rounded-xl", "w-full");
+socialImage.className = "rounded-xl w-full";
+socialImage.src = "../src/images/Social_Links.png";
+
+const socialCaption = document.createElement("div");
+socialCaption.id = "socialCaption";
+socialCaption.classList.add(captionClasses);
+socialCaption.className = captionClassName;
+socialCaption.innerHTML = `<h2 class="text-lg md:text-3xl text-center lg:text-left text-acc3">
             Generic Social Links Profile
           </h2>
           <p class="text-xs md:text-base text-acc4 px-2 md:indent-8">
@@ -121,28 +129,40 @@ newSocialLinks.innerHTML = `
             target="_blank"
             class="px-8 py-2 self-center border-2 border-acc3 shadow-xl rounded-lg bg-acc3 font-bold text-acc4 text-center text-xs md:text-base lg:text-lg hover:bg-acc4 hover:text-acc3 active:shadow-md active:shadow-acc3 active:scale-102 transition-colors duration-300 ease-in-out"
             >GitHub Repository</a
-          >
-        </div>`;
+          >`;
+
+
+mainBody.appendChild(newSocialLinks);
+newSocialLinks.appendChild(socialPageLink);
+newSocialLinks.appendChild(socialCaption);
+socialPageLink.appendChild(socialImage);
 
 
 const newBlogPreview = document.createElement("article");
 newBlogPreview.id = "newBlogPreview";
 newBlogPreview.classList.add(myClassList1);
 newBlogPreview.className = classes1;
-newBlogPreview.innerHTML = `
-        <!-- Picture and Link  -->
-        <a
-          href="https://auntfunny.github.io/Blog_Preview_Card/"
-          target="_blank"
-          class="w-full md:w-120 hover:scale-105 transition-transform duration-300 ease-in-out"
-          ><img
-            src="../src/images/Blog_Preview.png"
-            alt="Blog Preview Project"
-            class="rounded-xl w-full"
-        /></a>
-        <!-- Caption  -->
-        <div class="w-full md:w-3/4 lg:w-1/2 flex flex-col justify-evenly h-80">
-          <h2 class="text-lg md:text-3xl text-center lg:text-right text-acc3">
+
+
+const blogPageLink = document.createElement("a");
+blogPageLink.id = "blogPageLink";
+blogPageLink.href = "https://auntfunny.github.io/Blog_Preview_Card/";
+blogPageLink.target = "_blank";
+blogPageLink.classList.add(linkClasses);
+blogPageLink.className = linkClassName;
+
+const blogImage = document.createElement("img");
+blogImage.id = "blogImage";
+blogImage.alt = "Tip Calculator";
+blogImage.classList.add("rounded-xl", "w-full");
+blogImage.className = "rounded-xl w-full";
+blogImage.src = "../src/images/Blog_Preview.png";
+
+const blogCaption = document.createElement("div");
+blogCaption.id = "blogCaption";
+blogCaption.classList.add(captionClasses);
+blogCaption.className = captionClassName;
+blogCaption.innerHTML = `<h2 class="text-lg md:text-3xl text-center lg:text-right text-acc3">
             Generic Blog Preview Card
           </h2>
           <p
@@ -159,28 +179,41 @@ newBlogPreview.innerHTML = `
             target="_blank"
             class="px-8 py-2 self-center border-2 border-acc3 shadow-xl rounded-lg bg-acc3 font-bold text-acc4 text-center text-xs md:text-base lg:text-lg hover:bg-acc4 hover:text-acc3 active:shadow-md active:shadow-acc3 active:scale-102 transition-colors duration-300 ease-in-out"
             >GitHub Repository</a
-          >
-        </div>`;
+          >`;
+
+
+mainBody.appendChild(newBlogPreview);
+newBlogPreview.appendChild(blogPageLink);
+newBlogPreview.appendChild(blogCaption);
+blogPageLink.appendChild(blogImage);
 
 
 const newMenuPage = document.createElement("article");
 newMenuPage.id = "newMenuPage";
 newMenuPage.classList.add(myClassList2);
 newMenuPage.className = classes2;
-newMenuPage.innerHTML = `
-        <!-- Picture and Link  -->
-        <a
-          href="https://recipe-page-main-eosin-omega.vercel.app/"
-          target="_blank"
-          class="w-full md:w-120 hover:scale-105 transition-transform duration-300 ease-in-out"
-          ><img
-            src="../src/images/Recipe_Page.png"
-            alt="Recipe Page Project"
-            class="rounded-xl w-full"
-        /></a>
-        <!-- Caption  -->
-        <div class="w-full md:w-3/4 lg:w-1/2 flex flex-col justify-evenly h-80">
-          <h2 class="text-lg md:text-3xl text-center lg:text-left text-acc3">
+
+
+
+const recipePageLink = document.createElement("a");
+recipePageLink.id = "recipePageLink";
+recipePageLink.href = "https://recipe-page-main-eosin-omega.vercel.app/";
+recipePageLink.target = "_blank";
+recipePageLink.classList.add(linkClasses);
+recipePageLink.className = linkClassName;
+
+const recipeImage = document.createElement("img");
+recipeImage.id = "recipeImage";
+recipeImage.alt = "Tip Calculator";
+recipeImage.classList.add("rounded-xl", "w-full");
+recipeImage.className = "rounded-xl w-full";
+recipeImage.src = "../src/images/Recipe_Page.png";
+
+const recipeCaption = document.createElement("div");
+recipeCaption.id = "recipeCaption";
+recipeCaption.classList.add(captionClasses);
+recipeCaption.className = captionClassName;
+recipeCaption.innerHTML = `<h2 class="text-lg md:text-3xl text-center lg:text-left text-acc3">
             Generic Social Links Profile
           </h2>
           <p class="text-xs md:text-base text-acc4 px-2 md:indent-8">
@@ -195,8 +228,13 @@ newMenuPage.innerHTML = `
             target="_blank"
             class="px-8 py-2 self-center border-2 border-acc3 shadow-xl rounded-lg bg-acc3 font-bold text-acc4 text-center text-xs md:text-base lg:text-lg hover:bg-acc4 hover:text-acc3 active:shadow-md active:shadow-acc3 active:scale-102 transition-colors duration-300 ease-in-out"
             >GitHub Repository</a
-          >
-        </div>`;
+          >`;
+
+
+mainBody.appendChild(newMenuPage);
+newMenuPage.appendChild(recipePageLink);
+newMenuPage.appendChild(recipeCaption);
+recipePageLink.appendChild(recipeImage);
 
 
 
@@ -204,17 +242,28 @@ const newGateProject = document.createElement("article");
 newGateProject.id = "newGateProject";
 newGateProject.classList.add(myClassList1);
 newGateProject.className = classes1;
-newGateProject.innerHTML = `
-        <!-- Picture and Link  -->
-        <a href="#" target="_blank" class="w-full md:w-120"
-          ><img
-            src="../src/images/Gate.png"
-            alt="Gate Project"
-            class="rounded-xl w-full hover:scale-105 transition-transform duration-300 ease-in-out"
-        /></a>
-        <!-- Caption  -->
-        <div class="w-full md:w-3/4 lg:w-1/2 flex flex-col justify-evenly h-80">
-          <h2 class="text-lg md:text-3xl text-center lg:text-right text-acc3">
+
+
+
+const gatePageLink = document.createElement("a");
+gatePageLink.id = "gatePageLink";
+gatePageLink.href = "#";
+gatePageLink.target = "_blank";
+gatePageLink.classList.add(linkClasses);
+gatePageLink.className = linkClassName;
+
+const gateImage = document.createElement("img");
+gateImage.id = "gateImage";
+gateImage.alt = "Tip Calculator";
+gateImage.classList.add("rounded-xl", "w-full");
+gateImage.className = "rounded-xl w-full";
+gateImage.src = "../src/images/Gate.png";
+
+const gateCaption = document.createElement("div");
+gateCaption.id = "gateCaption";
+gateCaption.classList.add(captionClasses);
+gateCaption.className = captionClassName;
+gateCaption.innerHTML = `<h2 class="text-lg md:text-3xl text-center lg:text-right text-acc3">
             Cabin Gate Project
           </h2>
           <p
@@ -231,15 +280,13 @@ newGateProject.innerHTML = `
             target="_blank"
             class="px-8 py-2 self-center border-2 border-acc3 shadow-xl rounded-lg bg-acc3 font-bold text-acc4 text-center text-xs md:text-base lg:text-lg hover:bg-acc4 hover:text-acc3 active:shadow-md active:shadow-acc3 active:scale-102 transition-colors duration-300 ease-in-out"
             >Cabin Facebook</a
-          >
-        </div>`;
+          >`;
 
 
-
-
-mainBody.appendChild(newSocialLinks);
-mainBody.appendChild(newBlogPreview);
-mainBody.appendChild(newMenuPage);
 mainBody.appendChild(newGateProject);
+newGateProject.appendChild(gatePageLink);
+newGateProject.appendChild(gateCaption);
+gatePageLink.appendChild(gateImage);
+
 
 

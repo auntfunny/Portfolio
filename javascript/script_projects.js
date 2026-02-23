@@ -59,6 +59,13 @@ let sourceLinkClasses =
     " ",
   );
 
+
+/**************************************************************************************************************
+
+          CARD CLASSES
+
+***************************************************************************************************************/
+
 class projectCard {
   constructor(newID, style) {
     this.element = document.createElement("article");
@@ -259,7 +266,7 @@ const ageCalculatorObject = {
     text: `This was from Frontend Mentor It takes a date and uses it as the birth date 
             to calculate the age of the person. As the user inputs the date, it verifies 
             that the date is valid and, when the button is pressed, it validates the total 
-            date before calculating.I learned more about Javascript and how to write more 
+            date before calculating. I learned more about Javascript and how to write more 
             logical and clean code.`,
   },
   sourceLink: {

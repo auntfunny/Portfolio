@@ -57,12 +57,24 @@ function checkMenus(event) {
   }
 }
 
+/**************************************************************************************************************
+
+          CARD CLASS STYLES
+
+***************************************************************************************************************/
+
 const skillList = document.querySelector("#skillList");
 const skillClassList =
   "flex justify-center items-center w-28 h-28 lg:w-36 lg:h-36 rounded-xl bg-acc4 inset-shadow-sm/50 hover:scale-125 transition-all duration-400 ease-in-out".split(
     " ",
   );
 const skillImageClassList = "w-18 lg:w-28".split(" ");
+
+/**************************************************************************************************************
+
+          CARD CLASSES
+
+***************************************************************************************************************/
 
 class skillItem {
   constructor(newID) {

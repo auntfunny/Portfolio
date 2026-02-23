@@ -80,9 +80,7 @@ class skillItem {
   constructor(newID) {
     this.element = document.createElement("div");
     this.element.id = newID;
-    for (let item of skillClassList) {
-      this.element.classList.add(item);
-    }
+    this.element.classList.add(...skillClassList);
   }
 
   appendTo(parentSelector) {
@@ -103,9 +101,7 @@ class skillImage {
     this.element.id = newID;
     this.element.alt = newAlt;
     this.element.src = newSrc;
-    for (let item of skillImageClassList) {
-      this.element.classList.add(item);
-    }
+    this.element.classList.add(...skillImageClassList);
   }
 
   appendTo(parentSelector) {

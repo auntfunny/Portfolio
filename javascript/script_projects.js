@@ -32,11 +32,11 @@ function checkMenus(event) {
 const projectCardList = [];
 const projectCardIDList = [];
 
-let myClassList1 =
+let cardClassList1 =
   "flex flex-col lg:flex-row justify-between gap-4 items-center w-3/4 min-h-84 p-3 md:p-6 bg-acc2 shadow-[0px_4px_12px_#335145f4] rounded-xl".split(
     " ",
   );
-let myClassList2 =
+let cardClassList2 =
   "flex flex-col lg:flex-row-reverse justify-between gap-4 items-center w-3/4 min-h-84 p-3 md:p-6 bg-acc2 shadow-[0px_4px_12px_#335145f4] rounded-xl".split(
     " ",
   );
@@ -59,7 +59,6 @@ let sourceLinkClasses =
     " ",
   );
 
-
 /**************************************************************************************************************
 
           CARD CLASSES
@@ -71,13 +70,9 @@ class projectCard {
     this.element = document.createElement("article");
     this.element.id = newID;
     if (style === 1) {
-      for (let item of myClassList1) {
-        this.element.classList.add(item);
-      }
+      this.element.classList.add(...cardClassList1);
     } else {
-      for (let item of myClassList2) {
-        this.element.classList.add(item);
-      }
+      this.element.classList.add(...cardClassList2);
     }
   }
 
@@ -99,9 +94,7 @@ class projectPageLink {
     this.element.id = newID;
     this.element.href = newHref;
     this.element.target = "_blank";
-    for (let item of linkClasses) {
-      this.element.classList.add(item);
-    }
+    this.element.classList.add(...linkClasses);
   }
 
   appendTo(parentSelector) {
@@ -122,9 +115,7 @@ class projectImage {
     this.element.id = newID;
     this.element.alt = newAlt;
     this.element.src = newSrc;
-    for (let item of imageClasses) {
-      this.element.classList.add(item);
-    }
+    this.element.classList.add(...imageClasses);
   }
 
   appendTo(parentSelector) {
@@ -143,9 +134,7 @@ class projectCaption {
   constructor(newID) {
     this.element = document.createElement("div");
     this.element.id = newID;
-    for (let item of captionClasses) {
-      this.element.classList.add(item);
-    }
+    this.element.classList.add(...captionClasses);
   }
 
   appendTo(parentSelector) {
@@ -166,13 +155,9 @@ class projectTitle {
     this.element.id = newID;
     this.element.textContent = newTextContent;
     if (style === 1) {
-      for (let item of articleTitleClasses1) {
-        this.element.classList.add(item);
-      }
+      this.element.classList.add(...articleTitleClasses1);
     } else {
-      for (let item of articleTitleClasses2) {
-        this.element.classList.add(item);
-      }
+      this.element.classList.add(...articleTitleClasses2);
     }
   }
 
@@ -193,9 +178,7 @@ class projectP {
     this.element = document.createElement("p");
     this.element.id = newID;
     this.element.textContent = newTextContent;
-    for (let item of articlePClasses) {
-      this.element.classList.add(item);
-    }
+    this.element.classList.add(...articlePClasses);
   }
 
   appendTo(parentSelector) {
@@ -217,9 +200,7 @@ class projectSourceLink {
     this.element.href = newHref;
     this.element.target = "_blank";
     this.element.textContent = newText;
-    for (let item of sourceLinkClasses) {
-      this.element.classList.add(item);
-    }
+    this.element.classList.add(...sourceLinkClasses);
   }
 
   appendTo(parentSelector) {

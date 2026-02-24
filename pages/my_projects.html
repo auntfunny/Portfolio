@@ -106,23 +106,23 @@
         </div>
         <!-- Email form  -->
         <form
-          action="https://formsubmit.co/greenauntfunny@gmail.com"
+          action="#"
           method="POST"
           class="flex flex-col justify-evenly items-center w-3/4 lg:w-1/2 h-4/5"
         >
           <input
             type="text"
-            name="name"
-            id="name"
+            name="nameOfSender"
+            id="nameOfSender"
             placeholder="Your name"
             class="bg-gray-300 p-3 w-7/8 rounded-lg border-2 border-gray-500 focus:bg-white focus:outline-none focus:border-2 focus:border-acc3 focus:shadow-md focus:shadow-acc3"
           />
           <br />
           <input
             type="text"
-            name="email"
-            id="email"
-            placeholder="Email address"
+            name="subject"
+            id="subject"
+            placeholder="Subject"
             class="bg-gray-300 p-3 w-7/8 rounded-lg border-2 border-gray-500 focus:bg-white focus:outline-none focus:border-2 focus:border-acc3 focus:shadow-md focus:shadow-acc3"
           />
           <br />
@@ -134,7 +134,8 @@
           ></textarea>
           <br />
           <button
-            type="submit"
+            type="button"
+            id="sendEmail"
             class="w-7/8 px-4 py-2 mb-8 border-2 border-acc3 shadow-xl rounded-lg bg-acc3 font-bold text-acc4 text-center text-lg hover:bg-acc4 hover:text-acc3 active:shadow-md active:shadow-acc3 active:scale-102 transition-colors duration-300 ease-in-out"
           >
             Send message

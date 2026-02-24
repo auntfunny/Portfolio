@@ -122,75 +122,98 @@ class skillImage {
 ***************************************************************************************************************/
 const skillCardList = [];
 
-const htmlCard ={
+const htmlCard = {
   base: {
-    id: "htmlSkill"
+    id: "htmlSkill",
   },
   image: {
     id: "hmtlSkillImage",
     alt: "HTML Logo",
-    src: "/images/html.png"
-  }
-}
+    src: "/images/html.png",
+  },
+};
 skillCardList.push(htmlCard);
 
-const cssCard ={
+const cssCard = {
   base: {
-    id: "cssSkill"
+    id: "cssSkill",
   },
   image: {
     id: "cssSkillImage",
     alt: "CSS Logo",
-    src: "/images/css.png"
-  }
-}
+    src: "/images/css.png",
+  },
+};
 skillCardList.push(cssCard);
 
-
-const javascriptCard ={
+const javascriptCard = {
   base: {
-    id: "javascriptSkill"
+    id: "javascriptSkill",
   },
   image: {
     id: "javascriptSkillImage",
     alt: "JavaScript Logo",
-    src: "/images/javascript.png"
-  }
-}
+    src: "/images/javascript.png",
+  },
+};
 skillCardList.push(javascriptCard);
 
-
-const cCard ={
+const cCard = {
   base: {
-    id: "cSkill"
+    id: "cSkill",
   },
   image: {
     id: "cSkillImage",
     alt: "C++ Logo",
-    src: "/images/c.png"
-  }
-}
+    src: "/images/c.png",
+  },
+};
 skillCardList.push(cCard);
 
-
-const tailwindCard ={
+const tailwindCard = {
   base: {
-    id: "tailwindSkill"
+    id: "tailwindSkill",
   },
   image: {
     id: "tailwindSkillImage",
     alt: "Tailwind Logo",
-    src: "/images/tailwind.png"
-  }
-}
+    src: "/images/tailwind.png",
+  },
+};
 skillCardList.push(tailwindCard);
 
-
-for(let skill of skillCardList){
-  const newCard = new skillItem (skill.base.id);
-  const newImage = new skillImage(skill.image.id, skill.image.alt, skill.image.src)
+for (let skill of skillCardList) {
+  const newCard = new skillItem(skill.base.id);
+  const newImage = new skillImage(
+    skill.image.id,
+    skill.image.alt,
+    skill.image.src,
+  );
 
   newCard.appendTo("#skillList");
   newImage.appendTo(`#${skill.base.id}`);
 }
 
+/**************************************************************************************************************
+
+          EMAIL FUNCTION
+
+***************************************************************************************************************/
+const subject = document.querySelector("#subject");
+const message = document.querySelector("#message");
+const sendEmail = document.querySelector("#sendEmail");
+
+sendEmail.addEventListener("click", sendTheEmail);
+
+function sendTheEmail() {
+  if (!message.value || !subject.value) {
+    alert("Must enter message.");
+  } else {
+    const recipient = "anthonysblack.22@gmail.com";
+    const emailBody = message.value;
+    const subjectOfEmail = subject.value;
+
+    window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subjectOfEmail)}&body=${encodeURIComponent(emailBody)}`;
+    
+  }
+}

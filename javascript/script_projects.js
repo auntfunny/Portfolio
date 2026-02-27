@@ -304,46 +304,48 @@ projectCardList.push(tipCalculatorObject);
 
 /**************************************************************************************************************
 
-          SOCIAL LINKS CARD
+          TO_DO LIST CARD
 
 ***************************************************************************************************************/
-const socialLinksObject = {
+
+const toDoListObject = {
   card: {
-    id: "socialLinksCard",
+    id: "toDoList",
     style: 2,
   },
   pageLink: {
-    id: "socialPageLink",
-    href: "https://social-links-profile-theta-six.vercel.app/",
+    id: "toDoPageLink",
+    href: "https://to-do-list-one-pearl-38.vercel.app/",
   },
   image: {
-    id: "socialImage",
-    alt: "Social Links Page",
-    src: "/images/Social_Links_Large.png",
+    id: "toDoImage",
+    alt: "To-Do List Image",
+    src: "/images/ToDo_List_Large.png",
   },
   caption: {
-    id: "socialCaption",
+    id: "toDoCaption",
   },
   articleTitle: {
-    id: "socialArticleTitle",
-    text: "Generic Social Links Profile",
+    id: "toDoArticleTitle",
+    text: "Daily and General To-Do List",
     style: 2,
   },
   articlePara: {
-    id: "socialArticleP",
-    text: `This project came from a challenge given on the Frontend Mentor
-            site. It was to recreate the social links profile given to make it
-            as similar to the original picture as possible. This included making
-            it responsive for mobile users and including hover and focus states
-            to increase accessibility.`,
+    id: "toDoArticleP",
+    text: `This was a personal project that I wanted to complete as a
+             challenge for me, and as a useful app. This gave me the 
+             chance to work with Local Storage and was my first project 
+             that the changes made in the page stay after a page reload.`,
   },
   sourceLink: {
-    id: "socialSourceLink",
-    href: "https://github.com/auntfunny/Social_Links_Profile",
+    id: "toDoSourceLink",
+    href: "https://github.com/auntfunny/To-Do_List",
     text: "GitHub Repository",
   },
 };
-projectCardList.push(socialLinksObject);
+projectCardList.push(toDoListObject);
+
+
 
 /**************************************************************************************************************
 
@@ -391,46 +393,46 @@ projectCardList.push(gateObject);
 
 /**************************************************************************************************************
 
-          TO_DO LIST CARD
+          SOCIAL LINKS CARD
 
 ***************************************************************************************************************/
-
-const toDoListObject = {
+const socialLinksObject = {
   card: {
-    id: "toDoList",
+    id: "socialLinksCard",
     style: 2,
   },
   pageLink: {
-    id: "toDoPageLink",
-    href: "https://to-do-list-one-pearl-38.vercel.app/",
+    id: "socialPageLink",
+    href: "https://social-links-profile-theta-six.vercel.app/",
   },
   image: {
-    id: "toDoImage",
-    alt: "To-Do List Image",
-    src: "/images/ToDo_List.png",
+    id: "socialImage",
+    alt: "Social Links Page",
+    src: "/images/Social_Links_Large.png",
   },
   caption: {
-    id: "toDoCaption",
+    id: "socialCaption",
   },
   articleTitle: {
-    id: "toDoArticleTitle",
-    text: "Daily and General To-Do List",
+    id: "socialArticleTitle",
+    text: "Generic Social Links Profile",
     style: 2,
   },
   articlePara: {
-    id: "toDoArticleP",
-    text: `This was a personal project that I wanted to complete as a
-             challenge for me, and as a useful app. This gave me the 
-             chance to work with Local Storage and was my first project 
-             that the changes made in the page stay after a page reload.`,
+    id: "socialArticleP",
+    text: `This project came from a challenge given on the Frontend Mentor
+            site. It was to recreate the social links profile given to make it
+            as similar to the original picture as possible. This included making
+            it responsive for mobile users and including hover and focus states
+            to increase accessibility.`,
   },
   sourceLink: {
-    id: "toDoSourceLink",
-    href: "https://github.com/auntfunny/To-Do_List",
+    id: "socialSourceLink",
+    href: "https://github.com/auntfunny/Social_Links_Profile",
     text: "GitHub Repository",
   },
 };
-projectCardList.push(toDoListObject);
+projectCardList.push(socialLinksObject);
 
 /**************************************************************************************************************
 

@@ -391,47 +391,46 @@ projectCardList.push(gateObject);
 
 /**************************************************************************************************************
 
-          MENU PAGE CARD
+          TO_DO LIST CARD
 
 ***************************************************************************************************************/
 
-const menuPageObject = {
+const toDoListObject = {
   card: {
-    id: "newMenuPage",
+    id: "toDoList",
     style: 2,
   },
   pageLink: {
-    id: "recipePageLink",
-    href: "https://recipe-page-main-eosin-omega.vercel.app/",
+    id: "toDoPageLink",
+    href: "https://to-do-list-one-pearl-38.vercel.app/",
   },
   image: {
-    id: "recipeImage",
-    alt: "Recipe Page",
-    src: "/images/Recipe_Page_Large.png",
+    id: "toDoImage",
+    alt: "To-Do List Image",
+    src: "/images/ToDo_List.png",
   },
   caption: {
-    id: "recipeCaption",
+    id: "toDoCaption",
   },
   articleTitle: {
-    id: "recipeArticleTitle",
-    text: "Generic Recipe Page",
+    id: "toDoArticleTitle",
+    text: "Daily and General To-Do List",
     style: 2,
   },
   articlePara: {
-    id: "socialArticleP",
-    text: `This project came from a challenge given on the Frontend Mentor
-            site. The challenge was to create a recipe page based on the picture
-            provided, including styles using span and table features. There was
-            also a mobile picture, and this was the first real responsive,
-            mobile-first page that I created.`,
+    id: "toDoArticleP",
+    text: `This was a personal project that I wanted to complete as a
+             challenge for me, and as a useful app. This gave me the 
+             chance to work with Local Storage and was my first project 
+             that the changes made in the page stay after a page reload.`,
   },
   sourceLink: {
-    id: "recipeSourceLink",
-    href: "https://github.com/auntfunny/Recipe_Page_Main",
+    id: "toDoSourceLink",
+    href: "https://github.com/auntfunny/To-Do_List",
     text: "GitHub Repository",
   },
 };
-projectCardList.push(menuPageObject);
+projectCardList.push(toDoListObject);
 
 /**************************************************************************************************************
 
@@ -476,6 +475,50 @@ const blogPreviewObject = {
   },
 };
 projectCardList.push(blogPreviewObject);
+
+/**************************************************************************************************************
+
+          MENU PAGE CARD
+
+***************************************************************************************************************/
+
+const menuPageObject = {
+  card: {
+    id: "newMenuPage",
+    style: 2,
+  },
+  pageLink: {
+    id: "recipePageLink",
+    href: "https://recipe-page-main-eosin-omega.vercel.app/",
+  },
+  image: {
+    id: "recipeImage",
+    alt: "Recipe Page",
+    src: "/images/Recipe_Page_Large.png",
+  },
+  caption: {
+    id: "recipeCaption",
+  },
+  articleTitle: {
+    id: "recipeArticleTitle",
+    text: "Generic Recipe Page",
+    style: 2,
+  },
+  articlePara: {
+    id: "socialArticleP",
+    text: `This project came from a challenge given on the Frontend Mentor
+            site. The challenge was to create a responsive recipe page based 
+            on the picture provided, including styles using span and table 
+            features. This was the first real responsive, mobile-first page 
+            that I created.`,
+  },
+  sourceLink: {
+    id: "recipeSourceLink",
+    href: "https://github.com/auntfunny/Recipe_Page_Main",
+    text: "GitHub Repository",
+  },
+};
+projectCardList.push(menuPageObject);
 
 /**************************************************************************************************************
 
@@ -527,7 +570,6 @@ for (let project of projectCardList) {
   newSourceLink.appendTo(`#${project.caption.id}`);
 }
 
-
 /**************************************************************************************************************
 
           EMAIL FUNCTION
@@ -548,6 +590,5 @@ function sendTheEmail() {
     const subjectOfEmail = subject.value;
 
     window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subjectOfEmail)}&body=${encodeURIComponent(emailBody)}`;
-    
   }
 }

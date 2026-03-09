@@ -48,7 +48,7 @@ let imageClasses = "rounded-xl w-full".split(" ");
 let captionClasses =
   "w-full md:w-3/4 lg:w-1/2 flex flex-col justify-evenly h-80".split(" ");
 let articleTitleClasses1 =
-  "text-lg md:text-3xl text-center lg:text-right text-acc3".split(" ");
+  "text-lg md:text-3xl text-center lg:text-right text-acc3 pr-4".split(" ");
 let articleTitleClasses2 =
   "text-lg md:text-3xl text-center lg:text-left text-acc3".split(" ");
 let articlePClasses = "text-xs md:text-base text-acc4 px-2 md:indent-8".split(
@@ -550,6 +550,7 @@ for (let project of projectCardList) {
   const newTitle = new projectTitle(
     project.articleTitle.id,
     project.articleTitle.text,
+    project.articleTitle.style,
   );
 
   const newPara = new projectP(

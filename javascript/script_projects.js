@@ -246,7 +246,7 @@ const fakeStoreCatalog = {
   },
   articlePara: {
     id: "fakeStoreArticleP",
-    text: `This project was a personal project that I wanted to do to practice working with APIs and using the data to create a functioning page. I used the Fake Store API to get the data for the products and display them in a catalog format. I also added some basic styling and functionality to make it more user-friendly.`,
+    text: `This project was a personal project that I wanted to do to practice working with APIs and using the data to create a functioning page. I used the Fake Store API to get the data for the products and display them in a catalog format. I also added some styling and functionality to make it more user-friendly.`,
   },
   sourceLink: {
     id: "fakeStoreSourceLink",
@@ -286,7 +286,7 @@ const commentSection = {
   },
   articlePara: {
     id: "commentArticleP",
-    text: `This project was from a Frontend Mentor challenge. It was to create an interactive comment section that allows users to add, edit, and delete comments. I learned a lot about DOM manipulation and how to create a dynamic and interactive page using JavaScript.`,
+    text: `This project was from a Frontend Mentor challenge. It was to create an interactive comment section that allows users to add, edit, and delete comments. I learned a lot about DOM manipulation and how to create a dynamic and interactive page using React JS.`,
   },
   sourceLink: {
     id: "commentSourceLink",

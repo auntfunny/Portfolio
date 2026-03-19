@@ -158,6 +158,30 @@ const javascriptCard = {
 };
 skillCardList.push(javascriptCard);
 
+const tailwindCard = {
+  base: {
+    id: "tailwindSkill",
+  },
+  image: {
+    id: "tailwindSkillImage",
+    alt: "Tailwind Logo",
+    src: "/images/tailwind.png",
+  },
+};
+skillCardList.push(tailwindCard);
+
+const reactCard = {
+  base: {
+    id: "reactSkill",
+  },
+  image: {
+    id: "reactSkillImage",
+    alt: "React Logo",
+    src: "/images/react.png",
+  },
+};
+skillCardList.push(reactCard);
+
 const cCard = {
   base: {
     id: "cSkill",
@@ -170,17 +194,6 @@ const cCard = {
 };
 skillCardList.push(cCard);
 
-const tailwindCard = {
-  base: {
-    id: "tailwindSkill",
-  },
-  image: {
-    id: "tailwindSkillImage",
-    alt: "Tailwind Logo",
-    src: "/images/tailwind.png",
-  },
-};
-skillCardList.push(tailwindCard);
 
 for (let skill of skillCardList) {
   const newCard = new skillItem(skill.base.id);

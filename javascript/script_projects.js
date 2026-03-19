@@ -214,6 +214,177 @@ class projectSourceLink {
     }
   }
 }
+
+
+/**************************************************************************************************************
+
+          FAKE STORE CATALOG CARD
+
+***************************************************************************************************************/
+
+const fakeStoreCatalog = {
+  card: {
+    id: "fakeStoreCatalog",
+    style: 2,
+  },
+  pageLink: {
+    id: "fakeStorePageLink",
+    href: "https://fake-store-catalog-kappa.vercel.app/",
+  },
+  image: {
+    id: "fakeStoreImage",
+    alt: "Fake Store Catalog",
+    src: "/images/fakestore.png",
+  },
+  caption: {
+    id: "fakeStoreCaption",
+  },
+  articleTitle: {
+    id: "fakeStoreArticleTitle",
+    text: "Fake Store Catalog App",
+    style: 2,
+  },
+  articlePara: {
+    id: "fakeStoreArticleP",
+    text: `This project was a personal project that I wanted to do to practice working with APIs and using the data to create a functioning page. I used the Fake Store API to get the data for the products and display them in a catalog format. I also added some basic styling and functionality to make it more user-friendly.`,
+  },
+  sourceLink: {
+    id: "fakeStoreSourceLink",
+    href: "https://github.com/auntfunny/FakeStore_Catalog",
+    text: "GitHub Repository",
+  },
+};
+projectCardList.push(fakeStoreCatalog);
+
+/**************************************************************************************************************
+
+          COMMENT SECTION CARD
+
+***************************************************************************************************************/
+
+const commentSection = {
+  card: {
+    id: "commentSection",
+    style: 1,
+  },
+  pageLink: {
+    id: "commentPageLink",
+    href: "https://interactive-comments-section-peach-six.vercel.app/",
+  },
+  image: {
+    id: "commentImage",
+    alt: "Comment Section",
+    src: "/images/comment_section.png",
+  },
+  caption: {
+    id: "commentCaption",
+  },
+  articleTitle: {
+    id: "commentArticleTitle",
+    text: "Comment Section App",
+    style: 1,
+  },
+  articlePara: {
+    id: "commentArticleP",
+    text: `This project was from a Frontend Mentor challenge. It was to create an interactive comment section that allows users to add, edit, and delete comments. I learned a lot about DOM manipulation and how to create a dynamic and interactive page using JavaScript.`,
+  },
+  sourceLink: {
+    id: "commentSourceLink",
+    href: "https://github.com/auntfunny/Interactive_Comments_Section",
+    text: "GitHub Repository",
+  },
+};
+projectCardList.push(commentSection);
+
+
+
+/**************************************************************************************************************
+
+          TO_DO LIST CARD
+
+***************************************************************************************************************/
+
+const toDoListObject = {
+  card: {
+    id: "toDoList",
+    style: 2,
+  },
+  pageLink: {
+    id: "toDoPageLink",
+    href: "https://to-do-list-one-pearl-38.vercel.app/",
+  },
+  image: {
+    id: "toDoImage",
+    alt: "To-Do List Image",
+    src: "/images/ToDo_List_Large.png",
+  },
+  caption: {
+    id: "toDoCaption",
+  },
+  articleTitle: {
+    id: "toDoArticleTitle",
+    text: "Daily and General To-Do List",
+    style: 2,
+  },
+  articlePara: {
+    id: "toDoArticleP",
+    text: `This was a personal project that I wanted to complete as a
+             challenge for me, and as a useful app. This gave me the 
+             chance to work with Local Storage and was my first project 
+             that the changes made in the page stay after a page reload.`,
+  },
+  sourceLink: {
+    id: "toDoSourceLink",
+    href: "https://github.com/auntfunny/To-Do_List",
+    text: "GitHub Repository",
+  },
+};
+projectCardList.push(toDoListObject);
+
+/**************************************************************************************************************
+
+          GATE PROJECT CARD
+
+***************************************************************************************************************/
+
+const gateObject = {
+  card: {
+    id: "newGateProject",
+    style: 1,
+  },
+  pageLink: {
+    id: "gatePageLink",
+    href: "#",
+  },
+  image: {
+    id: "gateImage",
+    alt: "Gate Project",
+    src: "/images/Gate_Large.jpeg",
+  },
+  caption: {
+    id: "gateCaption",
+  },
+  articleTitle: {
+    id: "gateArticleTitle",
+    text: "Cabin Gate Project",
+    style: 1,
+  },
+  articlePara: {
+    id: "gateArticleP",
+    text: `This was a project I did for a cabin rental project as the main
+            entry gate. I built it by myself, designing, cutting and welding the
+            frame, setting the rail, and adding the wood planks, creating a
+            functioning and smooth rolling gate, with the option to add a motor
+            to make it automated.`,
+  },
+  sourceLink: {
+    id: "gateSourceLink",
+    href: "#",
+    text: "Cabin Facebook Page",
+  },
+};
+projectCardList.push(gateObject);
+
 /**************************************************************************************************************
 
           AGE CALCULATOR CARD
@@ -301,95 +472,6 @@ const tipCalculatorObject = {
   },
 };
 projectCardList.push(tipCalculatorObject);
-
-/**************************************************************************************************************
-
-          TO_DO LIST CARD
-
-***************************************************************************************************************/
-
-const toDoListObject = {
-  card: {
-    id: "toDoList",
-    style: 2,
-  },
-  pageLink: {
-    id: "toDoPageLink",
-    href: "https://to-do-list-one-pearl-38.vercel.app/",
-  },
-  image: {
-    id: "toDoImage",
-    alt: "To-Do List Image",
-    src: "/images/ToDo_List_Large.png",
-  },
-  caption: {
-    id: "toDoCaption",
-  },
-  articleTitle: {
-    id: "toDoArticleTitle",
-    text: "Daily and General To-Do List",
-    style: 2,
-  },
-  articlePara: {
-    id: "toDoArticleP",
-    text: `This was a personal project that I wanted to complete as a
-             challenge for me, and as a useful app. This gave me the 
-             chance to work with Local Storage and was my first project 
-             that the changes made in the page stay after a page reload.`,
-  },
-  sourceLink: {
-    id: "toDoSourceLink",
-    href: "https://github.com/auntfunny/To-Do_List",
-    text: "GitHub Repository",
-  },
-};
-projectCardList.push(toDoListObject);
-
-
-
-/**************************************************************************************************************
-
-          GATE PROJECT CARD
-
-***************************************************************************************************************/
-
-const gateObject = {
-  card: {
-    id: "newGateProject",
-    style: 1,
-  },
-  pageLink: {
-    id: "gatePageLink",
-    href: "#",
-  },
-  image: {
-    id: "gateImage",
-    alt: "Gate Project",
-    src: "/images/Gate_Large.jpeg",
-  },
-  caption: {
-    id: "gateCaption",
-  },
-  articleTitle: {
-    id: "gateArticleTitle",
-    text: "Cabin Gate Project",
-    style: 1,
-  },
-  articlePara: {
-    id: "gateArticleP",
-    text: `This was a project I did for a cabin rental project as the main
-            entry gate. I built it by myself, designing, cutting and welding the
-            frame, setting the rail, and adding the wood planks, creating a
-            functioning and smooth rolling gate, with the option to add a motor
-            to make it automated.`,
-  },
-  sourceLink: {
-    id: "gateSourceLink",
-    href: "#",
-    text: "Cabin Facebook Page",
-  },
-};
-projectCardList.push(gateObject);
 
 /**************************************************************************************************************
 

@@ -245,7 +245,7 @@ const bookFinder = {
   },
   articlePara: {
     id: "bookFinderArticleP",
-    text: "This was a project for one of my classes to work on using global states and consuming API's. I learned how to create custom hooks like useFetch and to create contexts to use throughout the app. I also added a login feature and connected a Supabase backend to save favorite book info for each user.",
+    text: "This was a React project for one of my classes to work on using global states and consuming API's. I learned how to create custom hooks like useFetch and to create contexts to use throughout the app. I also added a login feature and connected a Supabase backend to save favorite book info for each user.",
   },
   sourceLink: {
     id: "bookFinderSourceLink",
@@ -285,7 +285,7 @@ const weatherApp = {
   },
   articlePara: {
     id: "weatherArticleP",
-    text: "This project was focused specifically in consuming API's and showing the information. I learned how to use API keys and send different endpoints to retrieve the information needed. I consumed two different API's, one for the IP information and another for the weather information.",
+    text: "This project was with React and was focused specifically in consuming API's and showing the information. I learned how to use API keys and send different endpoints to retrieve the information needed. I consumed two different API's, one for the IP information and another for the weather information.",
   },
   sourceLink: {
     id: "WeatherSourceLink",
@@ -325,7 +325,7 @@ const fakeStoreCatalog = {
   },
   articlePara: {
     id: "fakeStoreArticleP",
-    text: `This project was a personal project that I wanted to do to practice working with APIs and using the data to create a functioning page. I used the Fake Store API to get the data for the products and display them in a catalog format. I also added some styling and functionality to make it more user-friendly.`,
+    text: `This project was a personal project that I wanted to do to practice working with APIs and React and using the data to create a functioning page. I used the Fake Store API to get the data for the products and display them in a catalog format. I also added some styling and functionality to make it more user-friendly.`,
   },
   sourceLink: {
     id: "fakeStoreSourceLink",

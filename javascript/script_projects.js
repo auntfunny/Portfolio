@@ -215,6 +215,85 @@ class projectSourceLink {
   }
 }
 
+/**************************************************************************************************************
+
+          FAKE STORE CATALOG CARD
+
+***************************************************************************************************************/
+
+const bookFinder = {
+  card: {
+    id: "bookFinderApp",
+    style: 2,
+  },
+  pageLink: {
+    id: "bookFinderPageLink",
+    href: "https://book-finder-beryl-eight.vercel.app/",
+  },
+  image: {
+    id: "bookFinderImage",
+    alt: "BookFinder App",
+    src: "/images/bookFinder.png",
+  },
+  caption: {
+    id: "bookFinderCaption",
+  },
+  articleTitle: {
+    id: "bookFinderArticleTitle",
+    text: "BookFinder App",
+    style: 2,
+  },
+  articlePara: {
+    id: "bookFinderArticleP",
+    text: "This was a project for one of my classes to work on using global states and consuming API's. I learned how to create custom hooks like useFetch and to create contexts to use throughout the app. I also added a login feature and connected a Supabase backend to save favorite book info for each user.",
+  },
+  sourceLink: {
+    id: "bookFinderSourceLink",
+    href: "https://github.com/auntfunny/BookFinder",
+    text: "GitHub Repository",
+  },
+};
+projectCardList.push(bookFinder);
+
+/**************************************************************************************************************
+
+          FAKE STORE CATALOG CARD
+
+***************************************************************************************************************/
+
+const weatherApp = {
+  card: {
+    id: "weatherApp",
+    style: 1,
+  },
+  pageLink: {
+    id: "weatherPageLink",
+    href: "https://weather-app-gules-beta-22.vercel.app/",
+  },
+  image: {
+    id: "weatherImage",
+    alt: "Weather App",
+    src: "/images/Weather.png",
+  },
+  caption: {
+    id: "weatherCaption",
+  },
+  articleTitle: {
+    id: "weatherArticleTitle",
+    text: "Weather App",
+    style: 1,
+  },
+  articlePara: {
+    id: "weatherArticleP",
+    text: "This project was focused specifically in consuming API's and showing the information. I learned how to use API keys and send different endpoints to retrieve the information needed. I consumed two different API's, one for the IP information and another for the weather information.",
+  },
+  sourceLink: {
+    id: "WeatherSourceLink",
+    href: "https://github.com/auntfunny/Weather_App",
+    text: "GitHub Repository",
+  },
+};
+projectCardList.push(weatherApp);
 
 /**************************************************************************************************************
 
@@ -295,8 +374,6 @@ const commentSection = {
   },
 };
 projectCardList.push(commentSection);
-
-
 
 /**************************************************************************************************************
 

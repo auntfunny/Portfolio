@@ -12,7 +12,7 @@
     <link rel="icon" type="image.png" href="/images/circle_logo.png" />
     <title>Anthony Black</title>
     <link rel="stylesheet" href="./src/input.css" />
-    <script type="module" src="./javascript/script_main.js" ></script>
+    <script type="module" src="./javascript/script_main.js"></script>
   </head>
   <body
     id="pageBody"
@@ -275,8 +275,8 @@
               </div>
 
               <a
-                href="/Resume.docx.pdf"
-                download="Resume.docx.pdf"
+                href="/Resume.pdf"
+                download="Resume.pdf"
                 class="px-4 py-2 border-2 border-acc3 shadow-xl rounded-lg bg-acc3 font-bold text-acc4 text-center text-base lg:text-lg hover:bg-acc4 hover:text-acc3 active:shadow-md active:shadow-acc3 active:scale-102 transition-colors duration-300 ease-in-out"
                 >Download my CV</a
               >
@@ -285,8 +285,7 @@
             <div
               class="flex flex-wrap gap-3 relative justify-evenly items-center w-full"
               id="skillList"
-            >
-            </div>
+            ></div>
           </div>
         </div>
       </section>
@@ -307,7 +306,7 @@
               class="h-60 w-20 rounded-xl hover:w-80 transition-all duration-300 bg-[url(/images/bookFinder_small.png)] bg-center shadow-lg"
             ></a>
             <a
-            href="./pages/my_projects.html#weatherApp"
+              href="./pages/my_projects.html#weatherApp"
               class="h-60 w-20 rounded-xl hover:w-80 transition-all duration-300 bg-[url(/images/Weather_small.png)] bg-center shadow-lg"
             ></a>
             <a
@@ -380,10 +379,12 @@
         <!-- Email form  -->
         <form
           action="#"
+          id="sendEmail"
           method="POST"
           class="flex flex-col justify-evenly items-center w-3/4 lg:w-1/2 h-4/5"
         >
           <input
+            required
             type="text"
             name="nameOfSender"
             id="nameOfSender"
@@ -392,6 +393,16 @@
           />
           <br />
           <input
+            required
+            type="email"
+            name="emailOfSender"
+            id="emailOfSender"
+            placeholder="Your email"
+            class="bg-gray-300 p-3 w-7/8 rounded-lg border-2 border-gray-500 focus:bg-white focus:outline-none focus:border-2 focus:border-acc3 focus:shadow-md focus:shadow-acc3"
+          />
+          <br />
+          <input
+            required
             type="text"
             name="subject"
             id="subject"
@@ -400,19 +411,23 @@
           />
           <br />
           <textarea
+            required
             name="message"
             id="message"
             placeholder="What's on your mind?"
             class="bg-gray-300 p-3 w-7/8 h-3/5 rounded-lg border-2 border-gray-500 focus:bg-white focus:outline-none focus:border-2 focus:border-acc3 focus:shadow-md focus:shadow-acc3"
           ></textarea>
           <br />
-          <button
-            type="button"
-            id="sendEmail"
-            class="w-7/8 px-4 py-2 mb-8 border-2 border-acc3 shadow-xl rounded-lg bg-acc3 font-bold text-acc4 text-center text-lg hover:bg-acc4 hover:text-acc3 active:shadow-md active:shadow-acc3 active:scale-102 transition-colors duration-300 ease-in-out"
-          >
-            Send message
-          </button>
+          <div class="flex flex-col items-center justify-center gap-1 w-full">
+            <button
+              type="submit"
+              id="formButton"
+              class="flex justify-center items-center w-7/8 px-4 py-2 border-2 border-acc3 shadow-xl rounded-lg bg-acc3 font-bold text-acc4 text-center text-lg hover:cursor-pointer hover:bg-acc4 hover:text-acc3 active:shadow-md active:shadow-acc3 active:scale-102 transition-colors duration-300 ease-in-out"
+            >
+              Send message
+            </button>
+            <p id="statusMessage" class="text-acc3"></p>
+          </div>
         </form>
       </section>
       <!-- Back to Top Button -->

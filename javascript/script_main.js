@@ -5,6 +5,9 @@ const pagesDropDownMenu = document.querySelector("#pagesDropDownMenu");
 const aboutLink = document.querySelector("#aboutLink");
 const skillsLink = document.querySelector("#skillsLink");
 const projectsLink = document.querySelector("#projectsLink");
+const projectImageList = document.querySelector("#projectImageList");
+
+import projects from "../data/projects.json";
 
 let pageMenuToggle = 0;
 let sectionMenuToggle = 0;
@@ -208,12 +211,30 @@ for (let skill of skillCardList) {
 
 /**************************************************************************************************************
 
+          IMAGE LIST
+
+***************************************************************************************************************/
+
+const imageClasses =
+  "h-60 w-20 rounded-xl hover:w-80 transition-all duration-300 bg-center shadow-lg".split(" ");
+
+for (let i = 0; i < 4; i++) {
+  const newImage = document.createElement("a");
+  newImage.id = "imageLink" + i;
+  newImage.href = "./pages/my_projects.html#" + projects[i].card.id;
+  newImage.classList.add(...imageClasses);
+  newImage.style.backgroundImage = `url(${projects[i].small_image})`;
+  projectImageList.appendChild(newImage);
+}
+
+/**************************************************************************************************************
+
           EMAIL FUNCTION
 
 ***************************************************************************************************************/
 const sendEmail = document.querySelector("#sendEmail");
 const formButton = document.querySelector("#formButton");
-const statusMessage = document.querySelector("#statusMessage")
+const statusMessage = document.querySelector("#statusMessage");
 import emailjs from "@emailjs/browser";
 
 emailjs.init({ publicKey: "W02jWj1PPR-ybgsFu" });
@@ -239,11 +260,11 @@ function sendTheEmail(event) {
     .then(
       () => {
         console.log("SUCCESS!");
-        statusMessage.textContent = "Message Sent!"
+        statusMessage.textContent = "Message Sent!";
       },
       (error) => {
         console.log("FAILED...", error.text);
-        statusMessage.textContent = "Message failed to send"
+        statusMessage.textContent = "Message failed to send";
       },
     )
     .finally(() => buttonLoading(false));

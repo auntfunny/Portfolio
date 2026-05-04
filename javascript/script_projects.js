@@ -1,11 +1,16 @@
+import projects from "../data/projects.json";
+
 const pagesDropDownButton = document.querySelector("#pagesDropDownButton");
 const pagesDropDownMenu = document.querySelector("#pagesDropDownMenu");
 const mainBody = document.querySelector("#mainBody");
+const projectList = document.querySelector("#projectList");
+const showMore = document.querySelector("#showMore");
 
 let pageMenuToggle = 0;
 
 pagesDropDownButton.addEventListener("click", togglePageMenu);
 document.body.addEventListener("click", checkMenus);
+showMore.addEventListener("click", showMoreProjects);
 
 function togglePageMenu(event) {
   if (pageMenuToggle === 0) {
@@ -33,11 +38,11 @@ const projectCardList = [];
 const projectCardIDList = [];
 
 let cardClassList1 =
-  "flex flex-col lg:flex-row justify-between gap-4 items-center w-3/4 min-h-84 p-3 md:p-6 bg-acc2 shadow-[0px_4px_12px_#335145f4] rounded-xl".split(
+  "flex flex-col lg:flex-row justify-between gap-4 items-center w-3/4 p-3 md:p-6 bg-acc2 shadow-[0px_4px_12px_#335145f4] rounded-xl hidden".split(
     " ",
   );
 let cardClassList2 =
-  "flex flex-col lg:flex-row-reverse justify-between gap-4 items-center w-3/4 min-h-84 p-3 md:p-6 bg-acc2 shadow-[0px_4px_12px_#335145f4] rounded-xl".split(
+  "flex flex-col lg:flex-row-reverse justify-between gap-4 items-center w-3/4 p-3 md:p-6 bg-acc2 shadow-[0px_4px_12px_#335145f4] rounded-xl hidden".split(
     " ",
   );
 let linkClasses =
@@ -46,12 +51,12 @@ let linkClasses =
   );
 let imageClasses = "rounded-xl w-full".split(" ");
 let captionClasses =
-  "w-full md:w-3/4 lg:w-1/2 flex flex-col justify-evenly h-80".split(" ");
+  "w-full md:w-3/4 lg:w-1/2 flex flex-col justify-evenly".split(" ");
 let articleTitleClasses1 =
   "text-lg md:text-3xl text-center lg:text-right text-acc3 pr-4".split(" ");
 let articleTitleClasses2 =
   "text-lg md:text-3xl text-center lg:text-left text-acc3".split(" ");
-let articlePClasses = "text-xs md:text-base text-acc4 px-2 md:indent-8".split(
+let articlePClasses = "text-xs md:text-base text-acc4 p-2 md:indent-8".split(
   " ",
 );
 let sourceLinkClasses =
@@ -67,7 +72,7 @@ let sourceLinkClasses =
 
 class projectCard {
   constructor(newID, style) {
-    this.element = document.createElement("article");
+    this.element = document.createElement("li");
     this.element.id = newID;
     if (style === 1) {
       this.element.classList.add(...cardClassList1);
@@ -215,483 +220,17 @@ class projectSourceLink {
   }
 }
 
-/**************************************************************************************************************
-
-          FAKE STORE CATALOG CARD
-
-***************************************************************************************************************/
-
-const bookFinder = {
-  card: {
-    id: "bookFinderApp",
-    style: 2,
-  },
-  pageLink: {
-    id: "bookFinderPageLink",
-    href: "https://book-finder-beryl-eight.vercel.app/",
-  },
-  image: {
-    id: "bookFinderImage",
-    alt: "BookFinder App",
-    src: "/images/bookFinder.png",
-  },
-  caption: {
-    id: "bookFinderCaption",
-  },
-  articleTitle: {
-    id: "bookFinderArticleTitle",
-    text: "BookFinder App",
-    style: 2,
-  },
-  articlePara: {
-    id: "bookFinderArticleP",
-    text: "This was a React project for one of my classes to work on using global states and consuming API's. I learned how to create custom hooks like useFetch and to create contexts to use throughout the app. I also added a login feature and connected a Supabase backend to save favorite book info for each user.",
-  },
-  sourceLink: {
-    id: "bookFinderSourceLink",
-    href: "https://github.com/auntfunny/BookFinder",
-    text: "GitHub Repository",
-  },
-};
-projectCardList.push(bookFinder);
 
 /**************************************************************************************************************
 
-          FAKE STORE CATALOG CARD
+          LOAD PROJECTS TO PAGE
 
 ***************************************************************************************************************/
+let loadedProjects = 5
 
-const weatherApp = {
-  card: {
-    id: "weatherApp",
-    style: 1,
-  },
-  pageLink: {
-    id: "weatherPageLink",
-    href: "https://weather-app-gules-beta-22.vercel.app/",
-  },
-  image: {
-    id: "weatherImage",
-    alt: "Weather App",
-    src: "/images/Weather.png",
-  },
-  caption: {
-    id: "weatherCaption",
-  },
-  articleTitle: {
-    id: "weatherArticleTitle",
-    text: "Weather App",
-    style: 1,
-  },
-  articlePara: {
-    id: "weatherArticleP",
-    text: "This project was with React and was focused specifically in consuming API's and showing the information. I learned how to use API keys and send different endpoints to retrieve the information needed. I consumed two different API's, one for the IP information and another for the weather information.",
-  },
-  sourceLink: {
-    id: "WeatherSourceLink",
-    href: "https://github.com/auntfunny/Weather_App",
-    text: "GitHub Repository",
-  },
-};
-projectCardList.push(weatherApp);
 
-/**************************************************************************************************************
-
-          FAKE STORE CATALOG CARD
-
-***************************************************************************************************************/
-
-const fakeStoreCatalog = {
-  card: {
-    id: "fakeStoreCatalog",
-    style: 2,
-  },
-  pageLink: {
-    id: "fakeStorePageLink",
-    href: "https://fake-store-catalog-kappa.vercel.app/",
-  },
-  image: {
-    id: "fakeStoreImage",
-    alt: "Fake Store Catalog",
-    src: "/images/fakestore.png",
-  },
-  caption: {
-    id: "fakeStoreCaption",
-  },
-  articleTitle: {
-    id: "fakeStoreArticleTitle",
-    text: "Fake Store Catalog App",
-    style: 2,
-  },
-  articlePara: {
-    id: "fakeStoreArticleP",
-    text: `This project was a personal project that I wanted to do to practice working with APIs and React and using the data to create a functioning page. I used the Fake Store API to get the data for the products and display them in a catalog format. I also added some styling and functionality to make it more user-friendly.`,
-  },
-  sourceLink: {
-    id: "fakeStoreSourceLink",
-    href: "https://github.com/auntfunny/FakeStore_Catalog",
-    text: "GitHub Repository",
-  },
-};
-projectCardList.push(fakeStoreCatalog);
-
-/**************************************************************************************************************
-
-          COMMENT SECTION CARD
-
-***************************************************************************************************************/
-
-const commentSection = {
-  card: {
-    id: "commentSection",
-    style: 1,
-  },
-  pageLink: {
-    id: "commentPageLink",
-    href: "https://interactive-comments-section-peach-six.vercel.app/",
-  },
-  image: {
-    id: "commentImage",
-    alt: "Comment Section",
-    src: "/images/comment_section.png",
-  },
-  caption: {
-    id: "commentCaption",
-  },
-  articleTitle: {
-    id: "commentArticleTitle",
-    text: "Comment Section App",
-    style: 1,
-  },
-  articlePara: {
-    id: "commentArticleP",
-    text: `This project was from a Frontend Mentor challenge. It was to create an interactive comment section that allows users to add, edit, and delete comments. I learned a lot about DOM manipulation and how to create a dynamic and interactive page using React JS.`,
-  },
-  sourceLink: {
-    id: "commentSourceLink",
-    href: "https://github.com/auntfunny/Interactive_Comments_Section",
-    text: "GitHub Repository",
-  },
-};
-projectCardList.push(commentSection);
-
-/**************************************************************************************************************
-
-          TO_DO LIST CARD
-
-***************************************************************************************************************/
-
-const toDoListObject = {
-  card: {
-    id: "toDoList",
-    style: 2,
-  },
-  pageLink: {
-    id: "toDoPageLink",
-    href: "https://to-do-list-one-pearl-38.vercel.app/",
-  },
-  image: {
-    id: "toDoImage",
-    alt: "To-Do List Image",
-    src: "/images/ToDo_List_Large.png",
-  },
-  caption: {
-    id: "toDoCaption",
-  },
-  articleTitle: {
-    id: "toDoArticleTitle",
-    text: "Daily and General To-Do List",
-    style: 2,
-  },
-  articlePara: {
-    id: "toDoArticleP",
-    text: `This was a personal project that I wanted to complete as a
-             challenge for me, and as a useful app. This gave me the 
-             chance to work with Local Storage and was my first project 
-             that the changes made in the page stay after a page reload.`,
-  },
-  sourceLink: {
-    id: "toDoSourceLink",
-    href: "https://github.com/auntfunny/To-Do_List",
-    text: "GitHub Repository",
-  },
-};
-projectCardList.push(toDoListObject);
-
-/**************************************************************************************************************
-
-          GATE PROJECT CARD
-
-***************************************************************************************************************/
-
-const gateObject = {
-  card: {
-    id: "newGateProject",
-    style: 1,
-  },
-  pageLink: {
-    id: "gatePageLink",
-    href: "#",
-  },
-  image: {
-    id: "gateImage",
-    alt: "Gate Project",
-    src: "/images/Gate_Large.jpeg",
-  },
-  caption: {
-    id: "gateCaption",
-  },
-  articleTitle: {
-    id: "gateArticleTitle",
-    text: "Cabin Gate Project",
-    style: 1,
-  },
-  articlePara: {
-    id: "gateArticleP",
-    text: `This was a project I did for a cabin rental project as the main
-            entry gate. I built it by myself, designing, cutting and welding the
-            frame, setting the rail, and adding the wood planks, creating a
-            functioning and smooth rolling gate, with the option to add a motor
-            to make it automated.`,
-  },
-  sourceLink: {
-    id: "gateSourceLink",
-    href: "#",
-    text: "Cabin Facebook Page",
-  },
-};
-projectCardList.push(gateObject);
-
-/**************************************************************************************************************
-
-          AGE CALCULATOR CARD
-
-***************************************************************************************************************/
-
-const ageCalculatorObject = {
-  card: {
-    id: "ageCalculator",
-    style: 2,
-  },
-  pageLink: {
-    id: "agePageLink",
-    href: "https://age-calculator-app-nine-pi.vercel.app/",
-  },
-  image: {
-    id: "ageImage",
-    alt: "Age Calculator",
-    src: "/images/Age_Calculator_Large.png",
-  },
-  caption: {
-    id: "ageCaption",
-  },
-  articleTitle: {
-    id: "ageArticleTitle",
-    text: "Age Calculator App",
-    style: 2,
-  },
-  articlePara: {
-    id: "ageArticleP",
-    text: `This was from Frontend Mentor It takes a date and uses it as the birth date 
-            to calculate the age of the person. As the user inputs the date, it verifies 
-            that the date is valid and, when the button is pressed, it validates the total 
-            date before calculating. I learned more about Javascript and how to write more 
-            logical and clean code.`,
-  },
-  sourceLink: {
-    id: "ageSourceLink",
-    href: "https://github.com/auntfunny/Age-Calculator-App",
-    text: "GitHub Repository",
-  },
-};
-projectCardList.push(ageCalculatorObject);
-
-/**************************************************************************************************************
-
-          TIP CALCULATOR CARD
-
-***************************************************************************************************************/
-
-const tipCalculatorObject = {
-  card: {
-    id: "newTipCalculator",
-    style: 1,
-  },
-  pageLink: {
-    id: "tipPageLink",
-    href: "https://tip-calculator-app-bay-phi.vercel.app/",
-  },
-  image: {
-    id: "tipImage",
-    alt: "Tip Calculator",
-    src: "/images/Tip_Calculator_Large.png",
-  },
-  caption: {
-    id: "tipCaption",
-  },
-  articleTitle: {
-    id: "tipArticleTitle",
-    text: "Tip Calculator App",
-    style: 1,
-  },
-  articlePara: {
-    id: "tipArticleP",
-    text: `This project was from a Frontend Mentor challenge. It was my first
-            JavaScript project, and I learned a lot about DOM manipulation and
-            how to create interactive material, letting the user enter info and
-            change the appearance of the site. It was an exciting first project
-            that taught me a lot of new skills.`,
-  },
-  sourceLink: {
-    id: "tipSourceLink",
-    href: "https://github.com/auntfunny/Tip_Calculator_App",
-    text: "GitHub Repository",
-  },
-};
-projectCardList.push(tipCalculatorObject);
-
-/**************************************************************************************************************
-
-          SOCIAL LINKS CARD
-
-***************************************************************************************************************/
-const socialLinksObject = {
-  card: {
-    id: "socialLinksCard",
-    style: 2,
-  },
-  pageLink: {
-    id: "socialPageLink",
-    href: "https://social-links-profile-theta-six.vercel.app/",
-  },
-  image: {
-    id: "socialImage",
-    alt: "Social Links Page",
-    src: "/images/Social_Links_Large.png",
-  },
-  caption: {
-    id: "socialCaption",
-  },
-  articleTitle: {
-    id: "socialArticleTitle",
-    text: "Generic Social Links Profile",
-    style: 2,
-  },
-  articlePara: {
-    id: "socialArticleP",
-    text: `This project came from a challenge given on the Frontend Mentor
-            site. It was to recreate the social links profile given to make it
-            as similar to the original picture as possible. This included making
-            it responsive for mobile users and including hover and focus states
-            to increase accessibility.`,
-  },
-  sourceLink: {
-    id: "socialSourceLink",
-    href: "https://github.com/auntfunny/Social_Links_Profile",
-    text: "GitHub Repository",
-  },
-};
-projectCardList.push(socialLinksObject);
-
-/**************************************************************************************************************
-
-          BLOG PREVIEW CARD
-
-***************************************************************************************************************/
-
-const blogPreviewObject = {
-  card: {
-    id: "newBlogPreview",
-    style: 1,
-  },
-  pageLink: {
-    id: "blogPageLink",
-    href: "https://auntfunny.github.io/Blog_Preview_Card/",
-  },
-  image: {
-    id: "blogImage",
-    alt: "Blog Preview Card Page",
-    src: "/images/Blog_Preview_Large.png",
-  },
-  caption: {
-    id: "blogCaption",
-  },
-  articleTitle: {
-    id: "blogArticleTitle",
-    text: "Generic Blog Preview Card",
-    style: 1,
-  },
-  articlePara: {
-    id: "blogArticleP",
-    text: `This project came from a challenge given on the Frontend Mentor
-            site. It was to recreate Blog Preview Card and include some
-            interactive hover features. This was one of the very first projects
-            I did and started practicing making projects with HTML and basic CSS
-            features.`,
-  },
-  sourceLink: {
-    id: "blogSourceLink",
-    href: "https://github.com/auntfunny/Blog_Preview_Card",
-    text: "GitHub Repository",
-  },
-};
-projectCardList.push(blogPreviewObject);
-
-/**************************************************************************************************************
-
-          MENU PAGE CARD
-
-***************************************************************************************************************/
-
-const menuPageObject = {
-  card: {
-    id: "newMenuPage",
-    style: 2,
-  },
-  pageLink: {
-    id: "recipePageLink",
-    href: "https://recipe-page-main-eosin-omega.vercel.app/",
-  },
-  image: {
-    id: "recipeImage",
-    alt: "Recipe Page",
-    src: "/images/Recipe_Page_Large.png",
-  },
-  caption: {
-    id: "recipeCaption",
-  },
-  articleTitle: {
-    id: "recipeArticleTitle",
-    text: "Generic Recipe Page",
-    style: 2,
-  },
-  articlePara: {
-    id: "socialArticleP",
-    text: `This project came from a challenge given on the Frontend Mentor
-            site. The challenge was to create a responsive recipe page based 
-            on the picture provided, including styles using span and table 
-            features. This was the first real responsive, mobile-first page 
-            that I created.`,
-  },
-  sourceLink: {
-    id: "recipeSourceLink",
-    href: "https://github.com/auntfunny/Recipe_Page_Main",
-    text: "GitHub Repository",
-  },
-};
-projectCardList.push(menuPageObject);
-
-/**************************************************************************************************************
-
-          UPLOAD ALL PROJECTS TO PAGE
-
-***************************************************************************************************************/
-
-for (let project of projectCardList) {
+for (let project of projects) {
   const newCard = new projectCard(project.card.id, project.card.style);
-
-  console.log(newCard);
-  console.log(project.card.id);
 
   const newPageLink = new projectPageLink(
     project.pageLink.id,
@@ -723,7 +262,7 @@ for (let project of projectCardList) {
     project.sourceLink.text,
   );
 
-  newCard.appendTo(`#mainBody`);
+  newCard.appendTo(`#projectList`);
   newPageLink.appendTo(`#${project.card.id}`);
   newCaption.appendTo(`#${project.card.id}`);
   newImage.appendTo(`#${project.pageLink.id}`);
@@ -731,6 +270,24 @@ for (let project of projectCardList) {
   newPara.appendTo(`#${project.caption.id}`);
   newSourceLink.appendTo(`#${project.caption.id}`);
 }
+
+function loadProjects(number){
+  for(let i = 0; i < number; i++){
+    projectList.children[i].classList.remove("hidden");
+  }
+}
+
+function showMoreProjects() {
+  if(loadedProjects < projects.length - 5){
+    loadedProjects += 5;
+  } else {
+    loadedProjects = projects.length;
+    mainBody.removeChild(showMore);
+  }
+  loadProjects(loadedProjects);
+}
+
+loadProjects(loadedProjects);
 
 /**************************************************************************************************************
 
